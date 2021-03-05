@@ -2,12 +2,18 @@
 
 class NumericArray{
 
-    public function __construct(array $a){
+    private $values;
 
+    public function __construct(array $a){
+        $this->values=$a;
     }
 
     public function getAverage() : int
     {
-        return 0;
+        if(count($this->values)==0)
+            return 0;
+        return $this->values[0];
+        
+
     }
 }
